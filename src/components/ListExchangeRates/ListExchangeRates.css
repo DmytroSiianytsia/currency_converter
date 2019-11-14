@@ -1,0 +1,11 @@
+.page-currencies__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+.page-currencies__check {
+  margin-left: 15px; }
+
+/*# sourceMappingURL=ListExchangeRates.css.map */

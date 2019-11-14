@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import reducer from './store/reducer';
+import { ListExchangeRatesContainer }
+  from './components/ListExchangeRates/ListExchangeRatesContainer';
+import { CurrencyConverterContainer }
+  from './components/CurrencyConverter/CurrencyConverterContainer';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
+import './styles/index.css';
+import { 
+  Route,
+  Switch,
+  NavLink
+} from 'react-router-dom';
+
+const store = createStore(reducer, applyMiddleware(thunk));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+     
+        <div className="App">
+          <Header />
+          <NavLink to="/currencies" className="header__link">Currencies</NavLink>
+          <NavLink to="/converter" className="header__link">Converter</NavLink>
+          <Switch>
+            <Route path="/currencies" component={ListExchangeRatesContainer} />
+            <Route path="/converter" exact component={CurrencyConverterContainer} />
+          </Switch>
+          <Footer />
+        </div>
+     
+    </Provider>
   );
 }
 

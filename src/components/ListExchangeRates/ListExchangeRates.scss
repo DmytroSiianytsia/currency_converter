@@ -1,0 +1,11 @@
+.page-currencies {
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__check {
+    margin-left: 15px;
+  }
+}

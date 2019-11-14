@@ -1,0 +1,27 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+  width: 100%;
+  padding: 20px 0;
+
+  background-color: #ccc;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    
+    white-space: nowrap;
+  }
+
+  &__logo {
+    height: 34px;
+    width: auto;
+  }
+ 
+  &__link:not(:last-child) {
+    margin-right: 50px;
+  }
+}
