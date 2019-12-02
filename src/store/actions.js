@@ -3,6 +3,10 @@ export const ACTION_TYPES = {
   STOP_LOADING: 'STOP_LOADING',
   SAVE_LIST_EXCHANGE_RATES: 'SAVE_LIST_EXCHANGE_RATES',
   IS_CHECKED: 'IS_CHECKED',
+  UPDATE_SELECT_ASK: 'UPDATE_SELECT_ASK',
+  UPDATE_SELECT_BID: 'UPDATE_SELECT_BID',
+  UPDATE_INPUT_ASK: 'UPDATE_INPUT_ASK',
+  UPDATE_INPUT_BID: 'UPDATE_INPUT_BID',
 };
 
 const urlExchangeRates =
@@ -36,4 +40,24 @@ export const loadListExchangeRates = () => dispatch => {
 export const isChecked = id => ({
   type: ACTION_TYPES.IS_CHECKED,
   payload: id
+});
+
+export const updateSelectAsk = (value) => ({
+  type: ACTION_TYPES.UPDATE_SELECT_ASK,
+  payload: value,
+});
+
+export const updateSelectBid = (value) => ({
+  type: ACTION_TYPES.UPDATE_SELECT_BID,
+  payload: value,
+});
+
+export const updateInputAsk = (value) => ({
+  type: ACTION_TYPES.UPDATE_INPUT_ASK,
+  payload: value,
+});
+
+export const updateInputBid = (value) => ({
+  type: ACTION_TYPES.UPDATE_INPUT_BID,
+  payload: value,
 });

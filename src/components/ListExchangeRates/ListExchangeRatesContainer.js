@@ -1,5 +1,4 @@
 import {connect} from 'react-redux';
-import {loadListExchangeRates} from '../../store/actions';
 import ListExchangeRates from './ListExchangeRates';
 
 function mapStateToProps(state) {
@@ -9,8 +8,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    loadListExchangeRates: () => dispatch(loadListExchangeRates()),
+  return {   
   }  
 }
 

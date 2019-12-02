@@ -27,13 +27,13 @@ export const Footer = () => (
 
           <div className="footer__social social">
             <a href="##" className="social__link">
-              <img src="./images/fb.svg" alt="Facebook" />
-            </a>
-            <a href="##" className="social__link">
               <img src="./images/tw.svg" alt="Twitter" />
             </a>
             <a href="##" className="social__link">
               <img src="./images/ig.svg" alt="Instagram" />
+            </a>
+            <a href="##" className="social__link">
+              <img src="./images/fb.svg" alt="Facebook" />
             </a>
           </div>
         </div>
