@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
 import './Header.css';
 
-
 export class Header extends Component {
 
   componentDidMount() {
@@ -30,7 +29,6 @@ export class Header extends Component {
           </div>
         </div>
       </header>
-
     )
   }
 }

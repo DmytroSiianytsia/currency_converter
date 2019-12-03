@@ -1,11 +1,9 @@
 import {connect} from 'react-redux';
-import  {Header}  from './Header';
+import {Header} from './Header';
 import {loadListExchangeRates} from '../../store/actions';
 
 function mapStateToProps(state) {
- return {
-
- }
+ return {}
 }
 
 function mapDispatchToProps(dispatch) {
