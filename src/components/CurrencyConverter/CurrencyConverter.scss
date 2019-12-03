@@ -1,3 +1,9 @@
+@import "../../styles/utils";
+
 .page-converter {
-  height: 74vh;
+  height: 75vh;
+
+  &__converter {
+    @extend %absolute-center;
+  }
 }
