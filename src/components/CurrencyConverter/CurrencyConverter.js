@@ -22,34 +22,34 @@ export default function CurrencyConverter(props) {
         <div className="content">
           <div className="page-converter__converter">
             <div className="page-converter__have">
-              <div>I have</div>              
-              <select
-                name="bid"                              
-                className="bid"
-                onChange={e => updateSelectBid(e.target.value)}
-              >
-                {listCurrensies}
-              </select>
+              <div className="page-converter__label">I HAVE</div> 
               <input
                 type="text"
                 onChange={e => updateInputBid(e.target.value)}
                 value={inputBid}
-              />
-            </div>
-            <div className="page-converter__want">
-              <div>I get</div>
+              />             
               <select
-                name="ask"              
-                className="ask"
-                onChange={e => updateSelectAsk(e.target.value)}
+                name="bid"                              
+                className="page-converter__select"
+                onChange={e => updateSelectBid(e.target.value)}
               >
                 {listCurrensies}
-              </select>
+              </select>              
+            </div>
+            <div className="page-converter__want">
+              <div className="page-converter__label">I'LL GET</div>
               <input
                 type="text"
                 onChange={e => updateInputAsk(e.target.value)}
                 value={inputAsk}
               />
+              <select
+                name="ask"              
+                className="page-converter__select"
+                onChange={e => updateSelectAsk(e.target.value)}
+              >
+                {listCurrensies}
+              </select>             
             </div>
           </div>
         </div>

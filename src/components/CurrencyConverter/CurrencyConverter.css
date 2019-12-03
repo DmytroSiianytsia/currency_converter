@@ -12,11 +12,19 @@
         -ms-flex-align: center;
             align-items: center;
     height: 300px;
-    width: 300px;
+    width: 400px;
     border-radius: 6px;
     -webkit-box-shadow: 3px 3px 7px;
             box-shadow: 3px 3px 7px;
-    margin: 10vh auto;
+    margin: 14vh auto;
+    padding-top: 20px;
     background: #99d6a6; }
+  .page-converter__have {
+    margin: 30px auto; }
+  .page-converter__label {
+    margin-bottom: 8px; }
+  .page-converter__select {
+    margin-left: 15px;
+    padding: 4px; }
 
 /*# sourceMappingURL=CurrencyConverter.css.map */
