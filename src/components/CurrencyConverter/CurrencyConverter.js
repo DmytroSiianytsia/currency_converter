@@ -1,10 +1,19 @@
 import React from 'react';
 
 export default function CurrencyConverter(props) { 
+  const {
+    listExchangeRates,
+    updateSelectBid,
+    updateInputBid,
+    updateSelectAsk,
+    updateInputAsk,
+    inputBid,
+    inputAsk,
+  } = props;
 
-  if (props.listExchangeRates) {
-    const listCurrensies = Object.entries(props.listExchangeRates).map(item => (      
-      <option value={item[1]} key={item}>{item[0]}</option>
+  if (listExchangeRates) {
+    const listCurrensies = listExchangeRates.map(item => (      
+      <option value={item[1]} key={item[0]}>{item[0]}</option>
     ));
    
     return (
@@ -12,32 +21,30 @@ export default function CurrencyConverter(props) {
         <div className="content">
           <div className="my">
             <select
-              name="bid"
-              id=""
+              name="bid"              
               className="bid"
-              onChange={e => props.updateSelectBid(e.target.value)}
+              onChange={e => updateSelectBid(e.target.value)}
             >
               {listCurrensies}
             </select>
             <input
               type="text"
-              onChange={e => props.updateInputBid(e.target.value)}
-              value={props.inputBid}
+              onChange={e => updateInputBid(e.target.value)}
+              value={inputBid}
             />
           </div>
           <div className="want">
             <select
-              name="ask"
-              id=""
+              name="ask"              
               className="ask"
-              onChange={e => props.updateSelectAsk(e.target.value)}
+              onChange={e => updateSelectAsk(e.target.value)}
             >
               {listCurrensies}
             </select>
             <input
               type="text"
-              onChange={e => props.updateInputAsk(e.target.value)}
-              value={props.inputAsk}
+              onChange={e => updateInputAsk(e.target.value)}
+              value={inputAsk}
             />
           </div>
         </div>

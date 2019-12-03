@@ -2,12 +2,12 @@ import { ACTION_TYPES } from './actions';
 
 const initialState = {
   isLoading: false,
-  listExchangeRates: null,
-  checkedCurrencies: [],
+  listExchangeRates: null,  
   selectAsk: 1,
   selectBid: 1,
   inputAsk: 1,
   inputBid: 1,
+  mainCurrency: 1,
 }
 
 export default function reducer(state = initialState, action) {
@@ -28,17 +28,26 @@ export default function reducer(state = initialState, action) {
       };
     }
 
-    case ACTION_TYPES.SAVE_LIST_EXCHANGE_RATES: {
+    case ACTION_TYPES.SAVE_LIST_EXCHANGE_RATES: {      
       return {
         ...state,
-        listExchangeRates: payload,
+        listExchangeRates: Object.entries(payload),
       };
     }
 
-    case ACTION_TYPES.IS_CHECKED: {
+    case ACTION_TYPES.IS_SELECTED: {      
+      let copyListExRates = state.listExchangeRates.slice();     
+      
+      for (let item of copyListExRates) {
+        if (payload === item[0]) {         
+         let selectedCurrency = copyListExRates.splice(copyListExRates.indexOf(item), 1);
+          copyListExRates.unshift(selectedCurrency[0]);
+        }
+      }    
+    
       return {
         ...state,
-
+        listExchangeRates: copyListExRates
       }
     }
 
@@ -71,6 +80,13 @@ export default function reducer(state = initialState, action) {
         ...state,
         inputBid: payload,
         inputAsk: (state.selectAsk / state.selectBid * payload).toFixed(4)
+      };
+    }
+
+    case ACTION_TYPES.SET_MAIN_CURRENCY: {
+      return {
+        ...state,
+        mainCurrency: payload,
       };
     }
     

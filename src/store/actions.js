@@ -2,15 +2,16 @@ export const ACTION_TYPES = {
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
   SAVE_LIST_EXCHANGE_RATES: 'SAVE_LIST_EXCHANGE_RATES',
-  IS_CHECKED: 'IS_CHECKED',
+  IS_SELECTED: 'IS_SELECTED',
   UPDATE_SELECT_ASK: 'UPDATE_SELECT_ASK',
   UPDATE_SELECT_BID: 'UPDATE_SELECT_BID',
   UPDATE_INPUT_ASK: 'UPDATE_INPUT_ASK',
   UPDATE_INPUT_BID: 'UPDATE_INPUT_BID',
+  SET_MAIN_CURRENCY: 'SET_MAIN_CURRENCY'
 };
 
 const urlExchangeRates =
-  'https://api.exchangeratesapi.io/latest';
+  'https://api.exchangeratesapi.io/latest?base=USD';
 
 const startLoading = () => ({
   type: ACTION_TYPES.START_LOADING,
@@ -37,8 +38,8 @@ export const loadListExchangeRates = () => dispatch => {
     .finally(() => dispatch(stopLoading()))
 };
 
-export const isChecked = id => ({
-  type: ACTION_TYPES.IS_CHECKED,
+export const isSelected = id => ({
+  type: ACTION_TYPES.IS_SELECTED,
   payload: id
 });
 
@@ -61,3 +62,8 @@ export const updateInputBid = (value) => ({
   type: ACTION_TYPES.UPDATE_INPUT_BID,
   payload: value,
 });
+
+export const setMainCurrency = (value) => ({
+  type: ACTION_TYPES.SET_MAIN_CURRENCY,
+  payload: value,
+})

@@ -21,10 +21,10 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <HeaderContainer />
+        <HeaderContainer />       
         <Switch>
           <Route path="/" exact component={ListExchangeRatesContainer} />
-          <Route path="/converter" exact component={CurrencyConverterContainer} />
+          <Route path="/converter" component={CurrencyConverterContainer} />
         </Switch>
         <Footer />
       </div>
