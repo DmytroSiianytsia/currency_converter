@@ -21,9 +21,11 @@ export default function CurrencyConverter(props) {
       <div className="page-converter">
         <div className="content">
           <div className="page-converter__converter">
-            <div className="my">
+            <div className="page-converter__have">
+              <label htmlFor="bid"></label>
               <select
-                name="bid"              
+                name="bid"
+                id="bid"              
                 className="bid"
                 onChange={e => updateSelectBid(e.target.value)}
               >
@@ -35,7 +37,7 @@ export default function CurrencyConverter(props) {
                 value={inputBid}
               />
             </div>
-            <div className="want">
+            <div className="page-converter__want">
               <select
                 name="ask"              
                 className="ask"
