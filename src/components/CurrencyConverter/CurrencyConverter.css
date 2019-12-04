@@ -1,5 +1,11 @@
 .page-converter {
-  height: 68vh; }
+  height: 75vh; }
+  .page-converter__title {
+    text-align: center;
+    padding-top: 60px;
+    font-size: 65px;
+    letter-spacing: .3em;
+    text-shadow: 1px 1px 3px; }
   .page-converter__converter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13,7 +19,7 @@
             align-items: center;
     height: 300px;
     width: 400px;
-    margin: 14vh auto;
+    margin: 8vh auto;
     padding-top: 30px;
     border-radius: 6px;
     -webkit-box-shadow: 3px 3px 7px;

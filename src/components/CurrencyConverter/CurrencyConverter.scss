@@ -1,7 +1,16 @@
 @import "../../styles/utils";
 
 .page-converter {
-  height: 68vh; 
+  height: 75vh; 
+
+  &__title {
+    text-align: center;
+    padding-top: 60px;
+
+    font-size: 65px;
+    letter-spacing: .3em;
+    text-shadow: $shadow;
+  }
 
   &__converter {
     display: flex;
@@ -10,7 +19,7 @@
 
     height: 300px;
     width: 400px; 
-    margin: 14vh auto;
+    margin: 8vh auto;
     padding-top: 30px;
 
     border-radius: 6px;
