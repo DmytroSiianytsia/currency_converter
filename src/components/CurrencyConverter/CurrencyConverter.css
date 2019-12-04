@@ -1,5 +1,5 @@
 .page-converter {
-  height: 75vh; }
+  height: 62vh; }
   .page-converter__converter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13,18 +13,27 @@
             align-items: center;
     height: 300px;
     width: 400px;
+    margin: 14vh auto;
+    padding-top: 30px;
     border-radius: 6px;
     -webkit-box-shadow: 3px 3px 7px;
             box-shadow: 3px 3px 7px;
-    margin: 14vh auto;
-    padding-top: 20px;
     background: #99d6a6; }
   .page-converter__have {
     margin: 30px auto; }
   .page-converter__label {
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 3px; }
+  .page-converter__input, .page-converter__select {
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 3px;
+            box-shadow: 1px 1px 3px;
+    background: #e6f093; }
+  .page-converter__input {
+    padding-left: 7px; }
   .page-converter__select {
     margin-left: 15px;
-    padding: 4px; }
+    padding: 3px;
+    cursor: pointer; }
 
 /*# sourceMappingURL=CurrencyConverter.css.map */

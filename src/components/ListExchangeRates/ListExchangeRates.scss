@@ -1,11 +1,64 @@
+@import "../../styles/utils";
+
 .page-currencies {
 
-  &__list {
-    display: flex;
-    align-items: center;
+  &__main-currency,
+  &__list-container {
+    margin: 0 auto;
+    width: 600px;    
+    box-shadow: 4px 3px 5px;
   }
 
-  &__check {
-    margin-left: 15px;
+  &__main-currency {
+    padding: 20px;
+    margin-top: 60px;  
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold; 
+    
+    text-shadow: $shadow;
+    border-radius: 10px 10px 0 0;
+    
+    background: $yellow;
+  }  
+
+  &__list-container { 
+    margin-bottom: 60px; 
+    padding: 20px 2px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px 2px;
+    
+    border-radius: 0 0 10px 10px;
+    
+    background: $green;
+  }
+
+  &__select {
+    margin-left: 30px;
+
+    background: $yellow;
+
+    cursor: pointer;      
+  }
+
+  &__list {
+    width: 100%;
+    padding: 7px 20px;
+    
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+
+    border: 1px solid $yellow;    
+  }
+
+  &__star {
+    margin-right: 5px;
+    width: 16px;
+
+    cursor: pointer;     
   }
 }

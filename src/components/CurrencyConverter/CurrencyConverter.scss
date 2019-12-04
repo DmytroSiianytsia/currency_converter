@@ -1,6 +1,7 @@
+@import "../../styles/utils";
+
 .page-converter {
-  height: 75vh;
- 
+  height: 62vh; 
 
   &__converter {
     display: flex;
@@ -9,14 +10,13 @@
 
     height: 300px;
     width: 400px; 
+    margin: 14vh auto;
+    padding-top: 30px;
 
     border-radius: 6px;
     box-shadow: 3px 3px 7px;
 
-    margin: 14vh auto;
-    padding-top: 20px;
-
-    background: #99d6a6;
+    background: $green;
   }
 
   &__have {
@@ -25,10 +25,25 @@
 
   &__label {
     margin-bottom: 8px;
+    text-shadow: $shadow;
+  }
+
+  &__input,
+  &__select {
+    border-radius: 3px;
+    box-shadow: $shadow;
+
+    background: $yellow;
+  }
+
+  &__input {
+    padding-left: 7px;   
   }
 
   &__select {
     margin-left: 15px;
-    padding: 4px;
+    padding: 3px; 
+
+    cursor: pointer;
   }
 }

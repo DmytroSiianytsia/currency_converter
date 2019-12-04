@@ -1,11 +1,43 @@
+.page-currencies__main-currency, .page-currencies__list-container {
+  margin: 0 auto;
+  width: 600px;
+  -webkit-box-shadow: 4px 3px 5px;
+          box-shadow: 4px 3px 5px; }
+.page-currencies__main-currency {
+  padding: 20px;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px;
+  border-radius: 10px 10px 0 0;
+  background: #e6f093; }
+.page-currencies__list-container {
+  margin-bottom: 60px;
+  padding: 20px 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px 2px;
+  border-radius: 0 0 10px 10px;
+  background: #99d6a6; }
+.page-currencies__select {
+  margin-left: 30px;
+  background: #e6f093;
+  cursor: pointer; }
 .page-currencies__list {
+  width: 100%;
+  padding: 7px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-.page-currencies__check {
-  margin-left: 15px; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-self: center;
+  border: 1px solid #e6f093; }
+.page-currencies__star {
+  margin-right: 5px;
+  width: 16px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=ListExchangeRates.css.map */

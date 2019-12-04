@@ -17,11 +17,10 @@ input {
   line-height: 1.5;
 }
 
-// input {
-//   border: none;
-//   background: transparent;
-//   outline: none;
-// }
+input, select {
+  border: none; 
+  outline: none;
+}
 
 a {
   text-decoration: none;

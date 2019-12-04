@@ -23,23 +23,36 @@ export default function ListExchangeRates(props) {
     return (
       <div className="page-currencies">
         <div className="content">
-          Main Currency
+
+          <div className="page-currencies__main-currency">
+            Main Currency
           <select
-            className="page-currencies__select"
-            onChange={setMainCurrency}
-          >
-            {selectCurrency}
-          </select>
-          {listExchangeRates.map((item) => (
-            <div key={item[0]} className="page-currencies__list">
-              <div className="page-currencies__currency">
-                {`${item[0]} : ${(item[1] / mainCurrency).toFixed(4)}`}
+              className="page-currencies__select"
+              onChange={setMainCurrency}
+            >
+              {selectCurrency}
+            </select>
+          </div>
+
+          <div className="page-currencies__list-container">
+            {listExchangeRates.map((item) => (
+              <div key={item[0]} className="page-currencies__list">
+                <div className="page-currencies__currency">
+                  {`${item[0]} : ${(item[1] / mainCurrency).toFixed(2)}`}
+                </div>
+                <span
+                  onClick={() => isSelected(item[0])}
+                >
+                  <img
+                    src='./images/star.jpg'
+                    alt="star"
+                    className="page-currencies__star"
+                  />
+                </span>
               </div>
-              <span onClick={() => isSelected(item[0])}>
-                <img src='./images/star.jpg' alt="star" width='14' />
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
+
         </div>
       </div>
     )

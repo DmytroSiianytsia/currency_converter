@@ -28,12 +28,13 @@ export default function reducer(state = initialState, action) {
       };
     }
 
-    case ACTION_TYPES.SAVE_LIST_EXCHANGE_RATES: {      
+    case ACTION_TYPES.SAVE_LIST_EXCHANGE_RATES: { 
+      const exchangeRates = Object.entries(payload);     
       return {
         ...state,
-        selectAsk: Object.entries(payload)[0][1],
-        selectBid: Object.entries(payload)[0][1],
-        listExchangeRates: Object.entries(payload),
+        selectAsk: exchangeRates[0][1],
+        selectBid: exchangeRates[0][1],        
+        listExchangeRates: exchangeRates,
       };
     }
 
@@ -58,18 +59,15 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         selectAsk: payload,
-        inputAsk: (payload / state.selectBid * state.inputBid).toFixed(4)
+        inputAsk: (payload / state.selectBid * state.inputBid).toFixed(2)
       };
     }
 
     case ACTION_TYPES.UPDATE_SELECT_BID: {
-      console.log(`state.selectAsk ${state.selectAsk}`)
-      console.log(`payload ${payload}`)
-      console.log(`state.inputBid ${state.inputBid}`)
       return {
         ...state,
         selectBid: payload,
-        inputAsk: (state.selectAsk / payload * state.inputBid).toFixed(4)
+        inputAsk: (state.selectAsk / payload * state.inputBid).toFixed(2)
       };
     }
 
@@ -77,7 +75,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         inputAsk: payload,
-        inputBid: (state.selectBid / state.selectAsk * payload).toFixed(4)
+        inputBid: (state.selectBid / state.selectAsk * payload).toFixed(2)
       };
     }
 
@@ -85,7 +83,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         inputBid: payload,
-        inputAsk: (state.selectAsk / state.selectBid * payload).toFixed(4)
+        inputAsk: (state.selectAsk / state.selectBid * payload).toFixed(2)
       };
     }
 
