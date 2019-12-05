@@ -22,7 +22,7 @@ export default function CurrencyConverter(props) {
     return (
       <div className="page-converter">
         <div className="content">
-          <h1 className="page-converter__title">CONVERTER</h1>
+          <h2 className="page-converter__title">CONVERTER</h2>
           <div className="page-converter__converter">
             <div className="page-converter__have">
               <div className="page-converter__label">I HAVE</div>

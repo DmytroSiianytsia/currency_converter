@@ -1,6 +1,13 @@
 @import "../../styles/utils";
 
 .page-currencies {
+  &__title {
+    text-align: center;
+    margin-top: 70px;
+    min-width: 550px;
+
+    font-size: 30px;
+  }
 
   &__main-currency,
   &__list-container {
@@ -15,9 +22,8 @@
 
     text-align: center;
     font-size: 20px;
-    font-weight: bold; 
+    font-weight: bold;    
     
-    text-shadow: $shadow;
     border-radius: 10px 10px 0 0;
     
     background: $yellow;
@@ -31,7 +37,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2px 2px;
     
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;    
     
     background: $green;
   }
@@ -40,6 +46,10 @@
     margin-left: 30px;
 
     background: $yellow;
+
+    border: 1px solid $green;
+    border-radius: 3px;
+    box-shadow: $shadow;
 
     cursor: pointer;      
   }
