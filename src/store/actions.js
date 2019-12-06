@@ -2,7 +2,7 @@ export const ACTION_TYPES = {
   START_LOADING: 'START_LOADING',
   STOP_LOADING: 'STOP_LOADING',
   SAVE_LIST_EXCHANGE_RATES: 'SAVE_LIST_EXCHANGE_RATES',
-  IS_SELECTED: 'IS_SELECTED',
+  SELECT_CURRENCY: 'SELECT_CURRENCY',
   UPDATE_SELECT_ASK: 'UPDATE_SELECT_ASK',
   UPDATE_SELECT_BID: 'UPDATE_SELECT_BID',
   UPDATE_INPUT_ASK: 'UPDATE_INPUT_ASK',
@@ -10,7 +10,7 @@ export const ACTION_TYPES = {
   SET_MAIN_CURRENCY: 'SET_MAIN_CURRENCY'
 };
 
-const urlExchangeRates =
+const exchangeRatesUrl =
   'https://api.exchangeratesapi.io/latest?base=USD';
 
 const startLoading = () => ({
@@ -29,17 +29,18 @@ const saveListExchangeRates = data => ({
 export const loadListExchangeRates = () => dispatch => {
   dispatch(startLoading());
 
-  fetch(urlExchangeRates)
+  fetch(exchangeRatesUrl)
     .then(res => res.json())
-    .then(( { rates } ) => {
+    .then(({ rates }) => {
       dispatch(saveListExchangeRates(rates))
     })
-    .catch(error => console.log(error))
+    .catch(error => { throw (error) }
+    )
     .finally(() => dispatch(stopLoading()))
 };
 
-export const isSelected = id => ({
-  type: ACTION_TYPES.IS_SELECTED,
+export const selectCurrency = id => ({
+  type: ACTION_TYPES.SELECT_CURRENCY,
   payload: id
 });
 

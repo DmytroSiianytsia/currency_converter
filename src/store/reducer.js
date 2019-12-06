@@ -38,8 +38,8 @@ export default function reducer(state = initialState, action) {
       };
     }
 
-    case ACTION_TYPES.IS_SELECTED: {
-      let copyListExRates = state.listExchangeRates.slice();
+    case ACTION_TYPES.SELECT_CURRENCY: {
+      let copyListExRates = [...state.listExchangeRates];
 
       for (let item of copyListExRates) {
         if (payload === item[0]) {

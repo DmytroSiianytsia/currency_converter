@@ -6,11 +6,11 @@ export default function ListExchangeRates(props) {
     listExchangeRates,
     setMainCurrency,
     mainCurrency,
-    isSelected,
+    selectCurrency,
   } = props;
 
   if (listExchangeRates) {
-    let selectCurrency = listExchangeRates.map(item => (
+    let listCurrency = listExchangeRates.map(item => (
       <option
         selected={item[0] === 'USD' ? true : false}
         value={item[1]}
@@ -35,7 +35,7 @@ export default function ListExchangeRates(props) {
               className="page-currencies__select"
               onChange={setMainCurrency}
             >
-              {selectCurrency}
+              {listCurrency}
             </select>
           </div>
 
@@ -46,7 +46,7 @@ export default function ListExchangeRates(props) {
                   {`${item[0]} : ${(item[1] / mainCurrency).toFixed(2)}`}
                 </div>
                 <span
-                  onClick={() => isSelected(item[0])}
+                  onClick={() => selectCurrency(item[0])}
                 >
                   <img
                     src='./images/star.jpg'

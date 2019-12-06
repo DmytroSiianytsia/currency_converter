@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import ListExchangeRates from './ListExchangeRates';
-import { setMainCurrency, isSelected } from '../../store/actions'
+import { setMainCurrency, selectCurrency } from '../../store/actions'
 
 function mapStateToProps(state) {
   return {
@@ -12,7 +12,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return { 
     setMainCurrency: value => dispatch(setMainCurrency(value.target.value)),
-    isSelected: value => dispatch(isSelected(value)),  
+    selectCurrency: value => dispatch(selectCurrency(value)),  
   }  
 }
 
