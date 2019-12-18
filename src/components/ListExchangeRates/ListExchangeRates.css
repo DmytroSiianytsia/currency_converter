@@ -47,5 +47,20 @@
   margin-right: 5px;
   width: 16px;
   cursor: pointer; }
+@media (max-width: 640px) {
+  .page-currencies__title {
+    text-align: center;
+    margin-top: 20px;
+    min-width: 250px;
+    font-size: 22px; }
+  .page-currencies__list-container {
+    grid-template-columns: 1fr 1fr; }
+  .page-currencies__main-currency, .page-currencies__list-container {
+    width: 320px; }
+  .page-currencies__main-currency {
+    margin-top: 10px;
+    font-size: 18px; }
+  .page-currencies__list {
+    padding: 4px 5px; } }
 
 /*# sourceMappingURL=ListExchangeRates.css.map */

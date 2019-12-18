@@ -39,7 +39,7 @@
     
     border-radius: 0 0 10px 10px;    
     
-    background: $green;
+    background: $green;    
   }
 
   &__select {
@@ -70,5 +70,33 @@
     width: 16px;
 
     cursor: pointer;     
+  }
+
+  @media (max-width: 640px) {
+    &__title {
+      text-align: center;
+      margin-top: 20px;
+      min-width: 250px;
+  
+      font-size: 22px;
+    }
+
+    &__list-container {
+      grid-template-columns: 1fr 1fr
+    }
+    
+    &__main-currency,
+    &__list-container {      
+      width: 320px;     
+    }
+
+    &__main-currency { 
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    &__list {      
+      padding: 4px 5px;
+    }
   }
 }
