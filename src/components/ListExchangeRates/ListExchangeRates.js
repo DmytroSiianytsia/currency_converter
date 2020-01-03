@@ -26,7 +26,7 @@ export default function ListExchangeRates(props) {
           <h2 className="page-currencies__title">
             Currency rates according to European Central Bank on
             {
-              ` ${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()}`
+              ` ${new Date().getDate()}.${(new Date().getMonth() + 1).toString().padStart(2, 0)}.${new Date().getFullYear()}`
             }
           </h2>
           <div className="page-currencies__main-currency">
