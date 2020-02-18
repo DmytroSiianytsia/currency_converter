@@ -6,7 +6,7 @@
   width: 100%;
   padding: 20px 0;
 
-  background-color: #ccc;
+  background-color: #b2c4d6;
 
   &__inner {
     display: flex;
@@ -19,6 +19,31 @@
   &__logo {
     height: 34px;
     width: auto;
+  }
+
+  &__link {
+    padding: 29px 0;
+    position: relative;
+    color: #40505f;    
+    font-weight: bold;
+    letter-spacing: 0.15em;
+
+    &:focus::after { 
+      position: absolute;
+      left: -10%;
+      bottom: 0;
+      width: 120%;
+      height: 3px;
+
+      content: '';
+      background-color: #001a33; 
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;      
+    }
+
+    &:focus {
+      color:  #001a33;
+    }
   }
  
   &__link:not(:last-child) {

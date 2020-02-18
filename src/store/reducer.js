@@ -8,7 +8,7 @@ const initialState = {
   inputAsk: 100,
   inputBid: 100,
   mainCurrency: 1,
-}
+};
 
 export default function reducer(state = initialState, action) {
   const { payload } = action;

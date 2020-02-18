@@ -3,9 +3,13 @@
   .page-converter__title {
     text-align: center;
     padding-top: 60px;
-    font-size: 50px;
-    letter-spacing: .3em;
-    text-shadow: 1px 1px 3px; }
+    font-size: 40px;
+    line-height: 47px; }
+  .page-converter__subtitle {
+    text-align: center;
+    font-size: 20px;
+    line-height: 23px;
+    color: #b2c4d6; }
   .page-converter__converter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -24,7 +28,7 @@
     border-radius: 6px;
     -webkit-box-shadow: 3px 3px 7px;
             box-shadow: 3px 3px 7px;
-    background: #99d6a6; }
+    background: #ffffff; }
   .page-converter__have {
     margin: 30px auto; }
   .page-converter__label {
@@ -34,7 +38,7 @@
     border-radius: 3px;
     -webkit-box-shadow: 1px 1px 3px;
             box-shadow: 1px 1px 3px;
-    background: #e6f093; }
+    background: #b2c4d6; }
   .page-converter__input {
     padding-left: 7px; }
   .page-converter__select {

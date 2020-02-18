@@ -5,7 +5,7 @@
   z-index: 1;
   width: 100%;
   padding: 20px 0;
-  background-color: #ccc; }
+  background-color: #b2c4d6; }
   .header__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -20,6 +20,24 @@
   .header__logo {
     height: 34px;
     width: auto; }
+  .header__link {
+    padding: 29px 0;
+    position: relative;
+    color: #40505f;
+    font-weight: bold;
+    letter-spacing: 0.15em; }
+    .header__link:focus::after {
+      position: absolute;
+      left: -10%;
+      bottom: 0;
+      width: 120%;
+      height: 3px;
+      content: '';
+      background-color: #001a33;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px; }
+    .header__link:focus {
+      color: #001a33; }
   .header__link:not(:last-child) {
     margin-right: 50px; }
 

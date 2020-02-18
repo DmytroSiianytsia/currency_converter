@@ -22,7 +22,8 @@ export default function CurrencyConverter(props) {
     return (
       <div className="page-converter">
         <div className="content">
-          <h2 className="page-converter__title">CONVERTER</h2>
+          <h2 className="page-converter__title">CURRENCY CONVERTER</h2>
+          <h3 className="page-converter__subtitle">Based on exchange rate of central bank</h3>
           <div className="page-converter__converter">
             <div className="page-converter__have">
               <div className="page-converter__label">I HAVE</div>

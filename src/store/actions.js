@@ -24,7 +24,7 @@ const stopLoading = () => ({
 const saveListExchangeRates = data => ({
   type: ACTION_TYPES.SAVE_LIST_EXCHANGE_RATES,
   payload: data
-})
+});
 
 export const loadListExchangeRates = () => dispatch => {
   dispatch(startLoading());
@@ -67,4 +67,4 @@ export const updateInputBid = (value) => ({
 export const setMainCurrency = (value) => ({
   type: ACTION_TYPES.SET_MAIN_CURRENCY,
   payload: value,
-})
+});

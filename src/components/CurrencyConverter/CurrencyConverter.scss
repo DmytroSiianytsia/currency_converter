@@ -7,9 +7,15 @@
     text-align: center;
     padding-top: 60px;
 
-    font-size: 50px;
-    letter-spacing: .3em;
-    text-shadow: $shadow;
+    font-size: 40px;
+    line-height: 47px;    
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 20px;
+    line-height: 23px;
+    color: $header-bg;
   }
 
   &__converter {
@@ -25,7 +31,7 @@
     border-radius: 6px;
     box-shadow: 3px 3px 7px;
 
-    background: $green;
+    background: $main-bg;
   }
 
   &__have {
@@ -42,7 +48,7 @@
     border-radius: 3px;
     box-shadow: $shadow;
 
-    background: $yellow;
+    background: $header-bg;
   }
 
   &__input {
