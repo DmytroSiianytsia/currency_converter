@@ -1,8 +1,10 @@
+body {
+  background: #f8f8e2; }
+
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0; }
 
 body,
@@ -31,9 +33,12 @@ button {
   max-width: 1160px;
   padding: 0 100px;
   margin: 0 auto; }
-  @media (max-width: 550px) {
+  @media (max-width: 956px) {
     .content {
       padding: 0 20px; } }
+  @media (max-width: 650px) {
+    .content {
+      padding: 0 5px; } }
   @media (min-width: 1281px) {
     .content {
       max-width: 1520px; } }

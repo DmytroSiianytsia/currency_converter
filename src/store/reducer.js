@@ -29,7 +29,7 @@ export default function reducer(state = initialState, action) {
     }
 
     case ACTION_TYPES.SAVE_LIST_EXCHANGE_RATES: { 
-      const exchangeRates = Object.entries(payload);     
+      const exchangeRates = Object.entries(payload).sort();     
       return {
         ...state,
         selectAsk: exchangeRates[0][1],

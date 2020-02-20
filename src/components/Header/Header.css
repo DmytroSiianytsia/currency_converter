@@ -1,5 +1,4 @@
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -7,15 +6,9 @@
   padding: 20px 0;
   background-color: #b2c4d6; }
   .header__inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     white-space: nowrap; }
   .header__logo {
     height: 34px;
@@ -40,5 +33,9 @@
       color: #001a33; }
   .header__link:not(:last-child) {
     margin-right: 50px; }
+
+@media (max-width: 950px) {
+  .content {
+    padding: 0 10px; } }
 
 /*# sourceMappingURL=Header.css.map */

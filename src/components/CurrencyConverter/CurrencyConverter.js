@@ -14,9 +14,14 @@ export default function CurrencyConverter(props) {
     inputAsk,
   } = props;
 
-  if (listExchangeRates) {
-    const listCurrensies = listExchangeRates.map(item => (
-      <option value={item[1]} key={item[0]}>{item[0]}</option>
+  if (listExchangeRates) {   
+    const listCurrensies = listExchangeRates.sort().map(item => (
+      <option
+        value={item[1]}        
+        key={item[0]}
+      >
+        {item[0]}
+      </option>
     ));
 
     return (
@@ -24,40 +29,47 @@ export default function CurrencyConverter(props) {
         <div className="content">
           <h2 className="page-converter__title">CURRENCY CONVERTER</h2>
           <h3 className="page-converter__subtitle">Based on exchange rate of central bank</h3>
-          <div className="page-converter__converter">
-            <div className="page-converter__have">
-              <div className="page-converter__label">I HAVE</div>
-              <input
-                className="page-converter__input"
-                type="text"
-                onChange={e => updateInputBid(e.target.value)}
-                value={inputBid}
-              />
-              <select
-                name="bid"
-                className="page-converter__select"
-                onChange={e => updateSelectBid(e.target.value)}
-                value={selectBid}
-              >
-                {listCurrensies}
-              </select>
+          <div className="converter">
+            <div className="converter__header">
+              <span>I HAVE</span>
+              <span>I'LL GET</span>
             </div>
-            <div className="page-converter__want">
-              <div className="page-converter__label">I'LL GET</div>
-              <input
-                className="page-converter__input"
-                type="text"
-                onChange={e => updateInputAsk(e.target.value)}
-                value={inputAsk}
-              />
-              <select
-                name="ask"
-                className="page-converter__select"
-                onChange={e => updateSelectAsk(e.target.value)}
-                value={selectAsk}
-              >
-                {listCurrensies}
-              </select>
+            <div className="converter__wrapper">
+              <div className="converter__have">
+                <select
+                  name="bid"
+                  className="converter__select"
+                  onChange={e => updateSelectBid(e.target.value)}
+                  value={selectBid}
+                >
+                  {listCurrensies}
+                </select>
+                <input
+                  className="converter__input"
+                  type="text"
+                  onChange={e => updateInputBid(e.target.value)}
+                  value={inputBid}
+                />
+              </div>
+              <div className="converter__midle">
+                <img className="converter__img" src="./images/vector.svg" alt="arows" />
+              </div>
+              <div className="converter__want">
+                <select
+                  name="ask"
+                  className="converter__select"
+                  onChange={e => updateSelectAsk(e.target.value)}
+                  value={selectAsk}
+                >
+                  {listCurrensies}
+                </select>
+                <input
+                  className="converter__input"
+                  type="text"
+                  onChange={e => updateInputAsk(e.target.value)}
+                  value={inputAsk}
+                />
+              </div>
             </div>
           </div>
         </div>

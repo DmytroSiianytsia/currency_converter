@@ -1,4 +1,7 @@
 @import "./utils";
+body {
+  background: rgb(248, 248, 226);
+}
 
 *,
 ::after,
@@ -37,11 +40,15 @@ button {
   max-width: 1160px;
   padding: 0 100px;
   margin: 0 auto;
-
-  @media (max-width: $break-point-phone) {
+  
+  @media (max-width: $break-point-tablet-lg) {
     padding: 0 20px;
   }
-  
+
+  @media (max-width: $break-point-phone-lg) {
+    padding: 0 5px;
+  }
+
   @media (min-width: $break-point-large) {
     max-width: 1520px;
   }
