@@ -147,4 +147,14 @@
       font-size: 30px;
     }  
   }
+
+  @media (max-width: $break-point-phone) {
+    .wrapper {
+      width: 320px;
+    } 
+
+    .list-title__price1 {
+      padding-right: 158px;
+    }    
+  }
 }

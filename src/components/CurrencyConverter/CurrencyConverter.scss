@@ -1,197 +1,233 @@
 @import "../../styles/utils";
 
-.page-converter {  
-  height: 100vh; 
+.page-converter {
+  height: 100vh;
 
   &__title {
     text-align: center;
     padding-top: 60px;
 
-    font-size: 40px;       
+    font-size: 40px;
   }
 
   &__subtitle {
     text-align: center;
-    font-size: 20px;   
+    font-size: 20px;
     color: $header-bg;
   }
 
-.converter { 
-  position: relative;
-  width: 745px;
-  height: 438px;
-  margin: 70px auto;
-
-  border-radius: 20px 20px 0 0;
-  background: $main-bg;
-  box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.09);
-
-  &__header {
-    display: flex;
-    justify-content: space-around;
-    height: 100px;
-
-    font-size: 27px;
-    line-height: 100px;
-    
-    color: #ffffff;
-    background: $title-bg;
-    border-radius: 20px 20px 0 0;
-  }
-  
-  &__wrapper {    
-    display: flex;
-    justify-content: space-around;
-  }
-
-  &__have,
-  &__want {
+  .converter {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;      
-  }
+    width: 745px;
+    height: 438px;
+    margin: 70px auto;
 
-    
-  &__have::after,
-  &__want::after {
-    position: absolute;
-    content: '';
-    left: 25%;
-    bottom: 45%;
-    width: 50%;
-    height: 1px;
-    background-color: $header-bg;
-  }
-
-  &__select,
-  &__input {
-    text-align: center;
-    background: transparent;
-  }
-
-  &__select {    
-    width: 80px;
-    margin-top: 87px;
-    font-size: 22px;
-    color: $title-bg;
-    
-    cursor: pointer;  
-  }
-
-  &__input {
-    width: 280px;
-    margin-top: 45px;
-    font-size: 44px;
-    color: $header-bg;
-  }
-
-  &__midle {    
-    display: flex;
-    justify-content: center;
-    width: 120px;
-    height: 48px;
-    margin-top: 74px;
-
-    border: 1px solid $title-bg;
-    border-radius: 6px;   
-  }
-
-  &__img {
-    width: 30px;
-  }
-}
-
-@media (max-width: $break-point-tablet-lg) { 
-  .page-converter{
-    height: 90vh; 
-    &__title {
-    padding-top: 50px;
-    font-size: 35px;
-    }
-
-    &__subtitle {     
-      font-size: 18px;      
-    } 
-  } 
-
-  .converter {
-    width: 600px;
-    height: 360px;
-    margin: 60px auto;
+    border-radius: 20px 20px 0 0;
+    background: $main-bg;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.09);
 
     &__header {
-      height: 90px;
-      font-size: 24px;
-      line-height: 90px;
+      display: flex;
+      justify-content: space-around;
+      height: 100px;
+
+      font-size: 27px;
+      line-height: 100px;
+
+      color: #ffffff;
+      background: $title-bg;
+      border-radius: 20px 20px 0 0;
     }
 
-    &__select {    
-      width: 70px;
-      margin-top: 75px;
-      font-size: 20px;      
-    }
-  
-    &__input { 
-      width: 180px;      
-      font-size: 28px;      
+    &__wrapper {
+      display: flex;
+      justify-content: space-around;
     }
 
-    &__midle {    
-      width: 80px;
-      height: 40px;
-      margin-top: 68px;        
-    }
-  
-    &__img {
-      width: 25px;
-    } 
-  }
-}
-
-@media (max-width: $break-point-phone-lg) {
-  height: 80vh; 
-  .page-converter{
-    &__title {
-    padding-top: 50px;
-    font-size: 30px;
+    &__have,
+    &__want {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    &__subtitle {     
-      font-size: 16px;      
-    } 
-  }
-
-  .converter {
-    width: 400px;
-    height: 300px;
-    margin: 50px auto;
-
-    &__header {
-      height: 80px;
-      font-size: 20px;
-      line-height: 80px;
+    &__have::after,
+    &__want::after {
+      position: absolute;
+      content: "";
+      left: 25%;
+      bottom: 45%;
+      width: 50%;
+      height: 1px;
+      background-color: $header-bg;
     }
 
-    &__select {    
-      width: 60px;
-      margin-top: 70px;
-      font-size: 16px;     
-    }
-  
+    &__select,
     &__input {
-      width: 170px;     
-      font-size: 24px;      
+      text-align: center;
+      background: transparent;
     }
 
-    &__midle {       
-      height: 30px;            
+    &__select {
+      width: 80px;
+      margin-top: 87px;
+      font-size: 22px;
+      color: $title-bg;
+
+      cursor: pointer;
     }
-  
+
+    &__input {
+      width: 280px;
+      margin-top: 45px;
+      font-size: 44px;
+      color: $header-bg;
+    }
+
+    &__midle {
+      display: flex;
+      justify-content: center;
+      width: 120px;
+      height: 48px;
+      margin-top: 74px;
+
+      border: 1px solid $title-bg;
+      border-radius: 6px;
+    }
+
     &__img {
-      width: 20px;
+      width: 30px;
     }
   }
-}
+
+  @media (max-width: $break-point-tablet-lg) {
+    .page-converter {      
+      &__title {
+        padding-top: 50px;
+        font-size: 35px;
+      }
+
+      &__subtitle {
+        font-size: 18px;
+      }
+    }
+
+    .converter {
+      width: 600px;
+      height: 360px;
+      margin: 60px auto;
+
+      &__header {
+        height: 90px;
+        font-size: 24px;
+        line-height: 90px;
+      }
+
+      &__select {
+        width: 70px;
+        margin-top: 75px;
+        font-size: 20px;
+      }
+
+      &__input {
+        width: 180px;
+        font-size: 28px;
+      }
+
+      &__midle {
+        width: 80px;
+        height: 40px;
+        margin-top: 68px;
+      }
+
+      &__img {
+        width: 25px;
+      }
+    }
+  }
+
+  @media (max-width: $break-point-phone-lg) {   
+    .page-converter {
+      &__title {
+        padding-top: 50px;
+        font-size: 30px;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+      }
+    }
+
+    .converter {
+      width: 400px;
+      height: 300px;
+      margin: 50px auto;
+
+      &__header {
+        height: 80px;
+        font-size: 20px;
+        line-height: 80px;
+      }
+
+      &__select {
+        width: 60px;
+        margin-top: 70px;
+        font-size: 16px;
+      }
+
+      &__input {
+        width: 170px;
+        font-size: 24px;
+      }
+
+      &__midle {
+        height: 30px;
+      }
+
+      &__img {
+        width: 20px;
+      }
+    }
+  }
+
+  @media (max-width: $break-point-phone) {    
+    .page-converter {
+      &__title {        
+        font-size: 27px;
+      }   
+    }    
+
+    .converter {
+      width: 320px;     
+
+      &__header {       
+        font-size: 18px;       
+      }
+
+      &__select {
+        width: 55px;        
+        font-size: 14px;
+      }   
+      
+      &__want::after,
+      &__have::after {
+        bottom: 40%;
+      }
+
+      &__input {
+        width: 140px;
+        font-size: 20px;
+      }
+
+      &__midle {
+        height: 25px;       
+      }
+
+      &__img {
+        width: 18px;
+      }
+    }
+  }
 }

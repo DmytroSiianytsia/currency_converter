@@ -90,5 +90,10 @@
       grid-template-columns: 1fr; }
     .page-currencies .page-currencies__title {
       font-size: 30px; } }
+  @media (max-width: 550px) {
+    .page-currencies .wrapper {
+      width: 320px; }
+    .page-currencies .list-title__price1 {
+      padding-right: 158px; } }
 
 /*# sourceMappingURL=ListExchangeRates.css.map */

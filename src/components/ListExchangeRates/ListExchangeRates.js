@@ -10,9 +10,9 @@ export default function ListExchangeRates(props) {
   } = props;
 
   if (listExchangeRates) {
-    let listCurrency = listExchangeRates.map(item => (
-      <option
-        selected={item[0] === 'USD' ? true : false}
+    const usd = listExchangeRates.find(item => item[0] === 'USD');
+    const listCurrency = listExchangeRates.map(item => (
+      <option        
         value={item[1]}
         key={item[0]}
       >
@@ -32,6 +32,7 @@ export default function ListExchangeRates(props) {
               <select
                 className="page-currencies__select"
                 onChange={setMainCurrency}
+                defaultValue={usd[1]}
               >
                 {listCurrency}
               </select>
