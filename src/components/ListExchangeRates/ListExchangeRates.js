@@ -9,7 +9,7 @@ export default function ListExchangeRates(props) {
     selectCurrency,
   } = props;
 
-  if (listExchangeRates) {
+ if ( listExchangeRates) {
     const usd = listExchangeRates.find(item => item[0] === 'USD');
     const listCurrency = listExchangeRates.map(item => (
       <option        

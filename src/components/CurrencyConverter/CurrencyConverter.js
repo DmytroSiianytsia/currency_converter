@@ -15,7 +15,7 @@ export default function CurrencyConverter(props) {
   } = props;
 
   if (listExchangeRates) {   
-    const listCurrensies = listExchangeRates.sort().map(item => (
+    const listCurrensies = listExchangeRates.sort().map(item => (      
       <option
         value={item[1]}        
         key={item[0]}
@@ -48,7 +48,7 @@ export default function CurrencyConverter(props) {
                   className="converter__input"
                   type="text"
                   onChange={e => updateInputBid(e.target.value)}
-                  value={inputBid}
+                  value={inputBid}                  
                 />
               </div>
               <div className="converter__midle">
@@ -67,7 +67,7 @@ export default function CurrencyConverter(props) {
                   className="converter__input"
                   type="text"
                   onChange={e => updateInputAsk(e.target.value)}
-                  value={inputAsk}
+                  value={inputAsk}                  
                 />
               </div>
             </div>

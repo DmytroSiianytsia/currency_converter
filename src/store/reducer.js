@@ -5,8 +5,8 @@ const initialState = {
   listExchangeRates: null,
   selectAsk: null,
   selectBid: null,
-  inputAsk: 100,
-  inputBid: 100,
+  inputAsk: 0,
+  inputBid: 0,
   mainCurrency: 1,
 };
 
@@ -72,19 +72,25 @@ export default function reducer(state = initialState, action) {
     }
 
     case ACTION_TYPES.UPDATE_INPUT_ASK: {
+    if(!isNaN(Number(payload))) {      
       return {
         ...state,
-        inputAsk: payload,
+        inputAsk: payload.trim(),
         inputBid: (state.selectBid / state.selectAsk * payload).toFixed(2)
-      };
-    }
+      }} else {
+        return { ...state}
+      }
+    }    
 
     case ACTION_TYPES.UPDATE_INPUT_BID: {
+      if(!isNaN(Number(payload))) {
       return {
         ...state,
-        inputBid: payload,
+        inputBid: payload.trim(),
         inputAsk: (state.selectAsk / state.selectBid * payload).toFixed(2)
-      };
+      }} else {
+        return {...state}
+      }
     }
 
     case ACTION_TYPES.SET_MAIN_CURRENCY: {
