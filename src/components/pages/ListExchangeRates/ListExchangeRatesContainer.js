@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import ListExchangeRates from './ListExchangeRates';
-import { setMainCurrency, selectCurrency } from '../../store/actions'
+import { setMainCurrency, selectCurrency } from '../../../store/actions'
 
 function mapStateToProps(state) {
   return {

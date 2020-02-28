@@ -5,7 +5,7 @@ import {
   updateSelectBid,
   updateInputAsk,
   updateInputBid,
-} from '../../store/actions';
+} from '../../../store/actions';
 
 function mapStateToProps(state) {
   return {

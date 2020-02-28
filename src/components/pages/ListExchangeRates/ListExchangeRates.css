@@ -1,8 +1,10 @@
 .page-currencies {
-  min-height: 90vh; }
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .page-currencies__title {
     text-align: center;
-    margin-top: 70px;
     font-weight: bold;
     font-size: 40px; }
   .page-currencies .wrapper {
@@ -10,10 +12,11 @@
     width: 745px;
     margin: 0 auto;
     border-radius: 20px 20px 0 0;
-    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.09); }
+    -webkit-box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.09);
+            box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.09); }
   .page-currencies__main-currency {
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 100px;
     font-size: 24px;
     border-radius: 20px 20px 0 0;
     color: #b2c4d6;
@@ -36,8 +39,12 @@
     position: relative;
     width: 100%;
     padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     color: #b2c4d6;
     background: #ffffff; }
     .page-currencies .list-title__name1 {
@@ -57,13 +64,21 @@
   .page-currencies__list {
     width: 100%;
     padding: 7px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     justify-self: center; }
   .page-currencies__currency {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .page-currencies__star {
     margin-right: 50px;
     width: 16px;
@@ -74,10 +89,7 @@
     .page-currencies .list-title__price2 {
       padding-right: 160px; }
     .page-currencies .page-currencies__title {
-      margin-top: 50px;
-      font-size: 35px; }
-    .page-currencies .page-currencies__main-currency {
-      margin-top: 50px; } }
+      font-size: 35px; } }
   @media (max-width: 650px) {
     .page-currencies .wrapper {
       width: 400px; }

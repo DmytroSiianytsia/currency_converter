@@ -35,7 +35,7 @@ button {
 .content {
   max-width: 1160px;
   padding: 0 100px;
-  margin: 0 auto;
+  margin: auto;
   
   @media (max-width: $break-point-tablet-lg) {
     padding: 0 20px;

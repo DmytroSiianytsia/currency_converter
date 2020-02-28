@@ -1,12 +1,11 @@
-@import "../../styles/utils";
+@import "../../../styles/utils";
 
 .page-converter {
   height: 100vh;
+  display: flex;  
 
   &__title {
     text-align: center;
-    padding-top: 60px;
-
     font-size: 40px;
   }
 
@@ -20,7 +19,7 @@
     position: relative;
     width: 745px;
     height: 438px;
-    margin: 70px auto;
+    margin: 70px auto 119px;
 
     border-radius: 20px 20px 0 0;
     background: $main-bg;
@@ -29,12 +28,12 @@
     &__header {
       display: flex;
       justify-content: space-around;
-      height: 100px;
+      height: 76px;
 
       font-size: 27px;
-      line-height: 100px;
+      line-height: 76px;
 
-      color: #ffffff;
+      color: $header-bg;
       background: $title-bg;
       border-radius: 20px 20px 0 0;
     }
@@ -104,8 +103,7 @@
 
   @media (max-width: $break-point-tablet-lg) {
     .page-converter {      
-      &__title {
-        padding-top: 50px;
+      &__title {        
         font-size: 35px;
       }
 
@@ -117,12 +115,12 @@
     .converter {
       width: 600px;
       height: 360px;
-      margin: 60px auto;
+      margin: 73px auto 197px;
 
       &__header {
-        height: 90px;
+        height: 76px;
         font-size: 24px;
-        line-height: 90px;
+        line-height: 76px;
       }
 
       &__select {
@@ -150,8 +148,7 @@
 
   @media (max-width: $break-point-phone-lg) {   
     .page-converter {
-      &__title {
-        padding-top: 50px;
+      &__title {        
         font-size: 30px;
       }
 
@@ -163,12 +160,12 @@
     .converter {
       width: 400px;
       height: 300px;
-      margin: 50px auto;
+      margin: 76px auto 257px;
 
       &__header {
-        height: 80px;
+        height: 76px;
         font-size: 20px;
-        line-height: 80px;
+        line-height: 76px;
       }
 
       &__select {
@@ -194,13 +191,14 @@
 
   @media (max-width: $break-point-phone) {    
     .page-converter {
-      &__title {        
+      &__title {              
         font-size: 27px;
       }   
     }    
 
     .converter {
-      width: 320px;     
+      width: 320px;
+      margin: 80px auto 257px;      
 
       &__header {       
         font-size: 18px;       

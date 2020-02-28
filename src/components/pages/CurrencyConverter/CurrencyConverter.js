@@ -48,7 +48,8 @@ export default function CurrencyConverter(props) {
                   className="converter__input"
                   type="text"
                   onChange={e => updateInputBid(e.target.value)}
-                  value={inputBid}                  
+                  value={inputBid} 
+                  placeholder="0"                 
                 />
               </div>
               <div className="converter__midle">
@@ -67,7 +68,8 @@ export default function CurrencyConverter(props) {
                   className="converter__input"
                   type="text"
                   onChange={e => updateInputAsk(e.target.value)}
-                  value={inputAsk}                  
+                  value={inputAsk}  
+                  placeholder="0"                
                 />
               </div>
             </div>

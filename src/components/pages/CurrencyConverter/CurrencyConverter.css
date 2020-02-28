@@ -1,8 +1,10 @@
 .page-converter {
-  height: 100vh; }
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .page-converter__title {
     text-align: center;
-    padding-top: 60px;
     font-size: 40px; }
   .page-converter__subtitle {
     text-align: center;
@@ -12,7 +14,7 @@
     position: relative;
     width: 745px;
     height: 438px;
-    margin: 70px auto;
+    margin: 70px auto 119px;
     border-radius: 20px 20px 0 0;
     background: #ffffff;
     -webkit-box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.09);
@@ -23,10 +25,10 @@
       display: flex;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      height: 100px;
+      height: 76px;
       font-size: 27px;
-      line-height: 100px;
-      color: #ffffff;
+      line-height: 76px;
+      color: #b2c4d6;
       background: #40505f;
       border-radius: 20px 20px 0 0; }
     .page-converter .converter__wrapper {
@@ -88,18 +90,17 @@
       width: 30px; }
   @media (max-width: 956px) {
     .page-converter .page-converter__title {
-      padding-top: 50px;
       font-size: 35px; }
     .page-converter .page-converter__subtitle {
       font-size: 18px; }
     .page-converter .converter {
       width: 600px;
       height: 360px;
-      margin: 60px auto; }
+      margin: 73px auto 197px; }
       .page-converter .converter__header {
-        height: 90px;
+        height: 76px;
         font-size: 24px;
-        line-height: 90px; }
+        line-height: 76px; }
       .page-converter .converter__select {
         width: 70px;
         margin-top: 75px;
@@ -115,18 +116,17 @@
         width: 25px; } }
   @media (max-width: 650px) {
     .page-converter .page-converter__title {
-      padding-top: 50px;
       font-size: 30px; }
     .page-converter .page-converter__subtitle {
       font-size: 16px; }
     .page-converter .converter {
       width: 400px;
       height: 300px;
-      margin: 50px auto; }
+      margin: 76px auto 257px; }
       .page-converter .converter__header {
-        height: 80px;
+        height: 76px;
         font-size: 20px;
-        line-height: 80px; }
+        line-height: 76px; }
       .page-converter .converter__select {
         width: 60px;
         margin-top: 70px;
@@ -142,7 +142,8 @@
     .page-converter .page-converter__title {
       font-size: 27px; }
     .page-converter .converter {
-      width: 320px; }
+      width: 320px;
+      margin: 80px auto 257px; }
       .page-converter .converter__header {
         font-size: 18px; }
       .page-converter .converter__select {

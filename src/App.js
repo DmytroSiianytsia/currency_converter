@@ -3,17 +3,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducer from './store/reducer';
-import { ListExchangeRatesContainer }
-  from './components/ListExchangeRates/ListExchangeRatesContainer';
-import { CurrencyConverterContainer }
-  from './components/CurrencyConverter/CurrencyConverterContainer';
 import { HeaderContainer } from './components/Header/HeaderContainer';
+import { Main } from './components/Main/Main';
 import { Footer } from './components/Footer/Footer';
 import './styles/index.css';
-import {
-  Route,
-  Switch,
-} from 'react-router-dom';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
@@ -22,10 +15,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <HeaderContainer />       
-        <Switch>
-          <Route path="/" exact component={ListExchangeRatesContainer} />
-          <Route path="/converter" component={CurrencyConverterContainer} />
-        </Switch>
+        <Main />
         <Footer />
       </div>
     </Provider>

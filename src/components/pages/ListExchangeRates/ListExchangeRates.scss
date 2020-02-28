@@ -1,11 +1,11 @@
-@import "../../styles/utils";
+@import "../../../styles/utils";
 
 .page-currencies {
   min-height: 90vh;
+  display: flex;
 
   &__title {
-    text-align: center;
-    margin-top: 70px;    
+    text-align: center;           
    
     font-weight: bold;
     font-size: 40px;    
@@ -21,7 +21,7 @@
 
   &__main-currency {
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 100px;
 
     font-size: 24px;      
     
@@ -115,13 +115,12 @@
       padding-right: 160px;
     } 
     
-    .page-currencies__title {
-      margin-top: 50px;
+    .page-currencies__title {      
       font-size: 35px;
     }
 
     .page-currencies__main-currency {
-      margin-top: 50px;
+      
     }
   }
 

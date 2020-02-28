@@ -5,8 +5,8 @@ const initialState = {
   listExchangeRates: null,
   selectAsk: null,
   selectBid: null,
-  inputAsk: 0,
-  inputBid: 0,
+  inputAsk: '',
+  inputBid: '',
   mainCurrency: 1,
 };
 
